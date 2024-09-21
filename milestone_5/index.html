@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Editable,Sharable Resume Builder</h1>
+    <form id="form">
+        <!-- Career Objective -->
+        <fieldset>
+            <legend>Career Objective</legend>
+            <label for="objective">Career Objective:</label><br>
+            <textarea id="objective" placeholder="Write down your objective" rows="6" cols="50"></textarea>
+        </fieldset>
+        
+        <!-- Profile Picture -->
+        <fieldset>
+            <legend>Profile Picture</legend>
+            <label for="profilePicture">Upload Profile Picture:</label><br>
+            <input type="file" id="profilePicture" accept="image/*"><br><br>
+            <img id="profilePreview" alt="Profile Preview" />
+        </fieldset>
+
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label><br>
+            <input id="name" type="text" placeholder="Write your name" required><br><br>
+            <label for="email">E-mail:</label><br>
+            <input id="email" type="email" placeholder="Write your e-mail" required><br><br>
+            <label for="phone">Phone:</label><br>
+            <input id="phone" type="tel" placeholder="Write your phone number" required><br><br>
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+            <legend>Academic Qualification</legend>
+            <label for="education">Qualification:</label><br>
+            <button id="edubutton" type="button" onclick="addEducationField()">Add your Degrees</button><br><br>
+        </fieldset>
+
+        <!-- Skills -->
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills:</label>
+            <button id="skillsbutton" type="button" onclick="addSkillsField()">Add your Skills</button><br><br>
+        </fieldset>
+
+        <!-- Experience -->
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience:</label><br>
+            <textarea id="experience" placeholder="Write down your working experience" rows="5" cols="50"></textarea>
+        </fieldset>
+        <br>
+
+        <!-- Generate Resume Button -->
+        <button type="submit"><b><i>Generate Resume</i></b></button>
+    </form>
+    <br>
+
+    <!-- Generated Resume -->
+    <div id="generated-resume" contenteditable="true"></div>
+
+    <!-- Shareable Link -->
+    <div id="shareable-link-container">
+        <h2>Shareable Link</h2>
+        <p>Here is your unique link to view or edit your Resume</p>
+        <a href="#" id="shareable-link" target="_blank"></a>
+        <br>
+        <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

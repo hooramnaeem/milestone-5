@@ -1,0 +1,208 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+h1 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+button:focus {
+    outline: none;
+    background-color: #357ABD;
+}
+
+#profilePicture {
+    margin-top: 10px;
+}
+
+#profilePreview {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 15px;
+    border: 3px solid #4a90e2;
+}
+
+/* Generated Resume Styling */
+#generated-resume {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+#generated-resume h2 {
+    color: #4a90e2;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#generated-resume p,
+#generated-resume ul {
+    margin: 10px 0;
+}
+
+#generated-resume ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#generated-resume img {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+#generated-resume span {
+    color: #555;
+    font-weight: bold;
+}
+
+/* Shareable Link Styling */
+#shareable-link-container {
+    text-align: center;
+}
+
+#shareable-link {
+    display: block;
+    margin-top: 10px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+#shareable-link:hover {
+    text-decoration: underline;
+}
+
+/* Download PDF Button */
+#download-pdf {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#download-pdf:hover {
+    background-color: #357ABD;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    form, #generated-resume {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    form, #generated-resume {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    #download-pdf {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
